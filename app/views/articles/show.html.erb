@@ -1,0 +1,8 @@
+<h1><%= @article.title %></h1>
+<p>by <%= @article.author %></p>
+
+<%= raw Kramdown::Document.new(@article.content).to_html %>
+
+<%= link_to "Edit article", edit_article_path %>
+<br>
+<%= link_to "Back to main list", articles_path %>
